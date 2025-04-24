@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>计费管理系统</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:200,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../package/iconfont/iconfont.css">
+  <link rel="stylesheet" href="../package/homeStyle.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-left">
+        <div class="iconfont icon-RectangleCopy4"></div>
+        <div class="title">计费管理系统</div>
+      </div>
+
+      <img src="../package/pictures/harmaste头像.jpg" alt="" class="nav-logo">
+    </div>
+      
+    
+    
+    
+    <ul class="menu">
+      <li>
+        <a href="#addCard">添加卡</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#searchCard">查询卡</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#use">上机</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#quit">下机</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#recharge">充值</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#refund">退费</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#lookup">查询统计</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+      <li>
+        <a href="#deleteCard">注销卡</a>
+        <span class="iconfont icon-more"></span>
+      </li>
+    </ul>
+  </nav>
+
+  <footer>
+    <ul>
+      <li class="title">developed by</li>
+      <li>planeta</li>
+      <li class="title">contact me</li>
+      <li><a href="#email">e-mail</a></li>
+      <li><a href="#qq">QQ</a></li>
+    </ul>
+  </footer>
+
+  <div class="content">
+    <div id="addCard" class="page">
+      <img src="../package/pictures/鼠鼠慌张.jpg" alt="" class="cover">
+      <h4>添加卡</h4>
+      <form class="addNewCard">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+          
+          <input type="password" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-trade logo"></p>
+            <p>开卡金额</p>
+          </div>
+          
+          <input type="number" max="100" required>
+        </div>
+        
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="openNewCard()">
+        </div>
+      </form>
+    </div>
+    <div id="searchCard" class="page">
+      <img src="../package/pictures/鼠鼠装逼.jpg" alt="" class="cover">
+      <h4>查询卡</h4>
+      <form action="" class="searchCard">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+        
+          <input type="password" required>
+        </div>
+
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="searchCard()">
+        </div>
+      </form>
+    </div>
+    <div id="use" class="page">
+      <img src="../package/pictures/鼠鼠心动.jpg" alt="" class="cover">
+      <h4>上机</h4>
+
+      <form action="" class="use">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+      
+          <input type="password" required>
+        </div>
+      
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="use()">
+        </div>
+      </form>
+    </div>
+    <div id="quit" class="page">
+      <h4>不知道为什么要有个下机</h4>
+    </div>
+    <div id="recharge" class="page">
+      <img src="../package/pictures/鼠鼠眯眼.jpg" alt="" class="cover">
+      <h4>充值</h4>
+
+      <form class="recharge">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+      
+          <input type="password" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-trade logo"></p>
+            <p>充值金额</p>
+          </div>
+      
+          <input type="number" max="100" required>
+        </div>
+      
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="recharge()">
+        </div>
+      </form>
+    </div>
+    <div id="refund" class="page">
+      <img src="../package/pictures/鼠鼠张大嘴.jpg" alt="" class="cover">
+      <h4>退费</h4>
+      
+      <form class="refund">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+      
+          <input type="password" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-trade logo"></p>
+            <p>退费金额</p>
+          </div>
+      
+          <input type="number" max="100" required>
+        </div>
+      
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="refund()">
+        </div>
+      </form>
+    </div>
+    <div id="lookup" class="page"></div>
+    <div id="deleteCard" class="page">
+      <img src="../package/pictures/鼠鼠惊讶.jpg" alt="" class="cover">
+
+      <h4>注销卡</h4>
+      <form action="" class="deleteCard">
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-add-account logo"></p>
+            <p>卡号</p>
+          </div>
+          <input type="number" min="0" max="999999999999999999" required>
+        </div>
+        <div class="area">
+          <div class="msg">
+            <p class="iconfont icon-password logo"></p>
+            <p>密码</p>
+          </div>
+      
+          <input type="password" required>
+        </div>
+      
+        <div class="area buttoms">
+          <input type="reset" class="form-buttom">
+          <input type="submit" class="form-buttom" onclick="deleteCard()">
+        </div>
+      </form>
+    </div>
+    <div id="qq" class="page">
+      <img src="../package/pictures/harmaste头像.jpg" alt="" class="cover">
+      <p>harmaste</p>
+      <p>&nbsp;&nbsp;<span>所在地:&nbsp;</span>南极洲</p>
+      <p>&nbsp;&nbsp;<span>签名:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>我吃人</p>
+      <p>&nbsp;&nbsp;<span>性别:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>男</p>
+    </div>
+  </div>
+  
+
+  
+
+  <script src="../package/homepage.js"></script>
+</body>
+</html>
